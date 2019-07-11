@@ -136,8 +136,9 @@ def smiles_to_mol(smiles_string):
 
 
 if __name__ == "__main__":
-    # calling this from command doesn't really have a point, because
-    # bash can't accept unescaped parentheses commonly found in SMILES
+    # calling this from the command line doesn't really makes sense,
+    # since bash doesn't accept unescaped parentheses "(" ")" commonly
+    # found in SMILES string
     from sys import argv
     mol = smiles_to_mol(argv[1])
     print("Formula: {} Atomic mass: {} g/mol".format(mol["formula"], mol["mass"]))

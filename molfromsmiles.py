@@ -127,7 +127,7 @@ def smiles_to_mol(smiles_string):
         count = atoms_and_counts[atom]
         if count > 1:
             formula += str(count)
-        total_mass += _masses_[atom]
+        total_mass += count * _masses_[atom]
 
     return {
         "formula": formula,
